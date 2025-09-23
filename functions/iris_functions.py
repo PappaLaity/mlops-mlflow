@@ -3,6 +3,7 @@ from sklearn import datasets
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
 
 
 def load_iris_data():
@@ -23,6 +24,17 @@ def train_iris_lr_model(X_train,y_train,params):
     lr_model.fit(X_train,y_train)
     
     return lr_model
+
+def train_iris_dt_model(X_train,y_train,params):
+    
+    model = DecisionTreeClassifier(**params)
+
+    model.fit(X_train,y_train)
+    
+    return model
+
+
+
 
 
 def evaluate_iris_lr_model(y_test, y_pred):
