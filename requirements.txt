@@ -3,3 +3,4 @@ scikit-learn
 matplotlib
 pytest
 mlflow
+python-dotenv
